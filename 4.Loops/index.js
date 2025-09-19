@@ -184,7 +184,7 @@ console.log(person)
 // var arr = [{ name: 'sachin' }, { name: 'kohli' }]
 
 // for (var value of arr) {
-//   console.log(value.name)
+//   console.log(value)
 // }
 
 

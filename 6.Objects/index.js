@@ -195,9 +195,62 @@ var originalObject = {
 
 //Template Strings
 
-var name = 'sachin'
-var age = 40
+// var name = 'sachin'
+// var age = 40
 
-console.log('Hi this is' + ' ' + name + ' ' + 'my age is' + ' ' + age ) //old
-console.log(`Hi this is ${name} My age is ${age}`) //new
+// console.log('Hi this is' + ' ' + name + ' ' + 'my age is' + ' ' + age ) //old
+// console.log(`Hi this is ${name} My age is ${age}`) //new
+
+//string object
+
+
+var msg = 'Hi You how are You'
+// console.log(msg)
+
+// console.log(msg.length)
+
+// console.log(msg.trim().length)
+// console.log(msg.trimStart().length)
+// console.log(msg.trimEnd().length)
+
+// console.log(msg.slice())
+// console.log(msg.slice(0))
+// console.log(msg.slice(0, 2))
+// console.log(msg.slice(-3))
+// console.log(msg.substring())
+// console.log(msg.substring(0))
+// console.log(msg.substring(0, 2))
+// console.log(msg.substring(-3))
+
+// console.log(msg.charAt(1))
+// console.log(msg.charCodeAt(1))
+
+// console.log(msg.toUpperCase())
+// console.log(msg.toLowerCase())
+
+// console.log(msg.concat(' sachin'))
+
+// var res = msg.split(' ')
+// console.log(res, typeof res)
+
+// var msg = 'hello'
+// console.log(msg.padStart(9, 'hi'))
+// console.log(msg.padEnd(9, 3))
+
+// console.log(msg.replace('You', 'me'))
+// console.log(msg.replaceAll('You', 'me'))
+
+// console.log(msg.indexOf('You'))
+// console.log(msg.indexOf('bye'))
+// console.log(msg.lastIndexOf('You'))
+// console.log(msg.lastIndexOf('bye'))
+// console.log(msg.includes('You'))
+// console.log(msg.includes('bye'))
+console.log(msg.startsWith('Hi'))
+console.log(msg.startsWith('bye'))
+console.log(msg.endsWith('You'))
+console.log(msg.endsWith('bye'))
+
+
+
 

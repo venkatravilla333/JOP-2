@@ -246,11 +246,134 @@ var msg = 'Hi You how are You'
 // console.log(msg.lastIndexOf('bye'))
 // console.log(msg.includes('You'))
 // console.log(msg.includes('bye'))
-console.log(msg.startsWith('Hi'))
-console.log(msg.startsWith('bye'))
-console.log(msg.endsWith('You'))
-console.log(msg.endsWith('bye'))
+// console.log(msg.startsWith('Hi'))
+// console.log(msg.startsWith('bye'))
+// console.log(msg.endsWith('You'))
+// console.log(msg.endsWith('bye'))
 
 
+// console.log(this)
 
+
+// function test() {
+//   console.log(this)
+// }
+// test()
+
+
+// var person = {
+//   name: 'sachin',
+//   outer1: function() {
+//     // console.log(this)
+//     var inner1 =  ()=> {
+//       // console.log(this)
+//     }
+//     inner1()
+//     // inner1.call(this)
+//     // inner1.apply(this)
+//     // inner1.bind(this)()
+//     var inner2 = ()=> {
+//       // console.log(this)
+//     }
+//     inner2()
+//   },
+//   outer2: ()=> {
+//     // console.log(this)
+//      var inner1 = function() {
+//       console.log(this)
+//     }
+//     inner1.call(person)
+//     var inner2 = ()=> {
+//       console.log(this)
+//     }
+//     inner2.call(person)
+//   }
+  
+// }
+
+// person.outer1()
+// person.outer2()
+
+
+function test() {
+  console.log(this)
+  this.name = 'sachin';
+  this.outer1 = function () {
+    console.log(this)
+    var inner1 = () =>{
+      console.log(this)
+    }
+    inner1()
+    var inner2 = ()=> {
+      console.log(this)
+    }
+    inner2()
+
+  };
+  this.outer2 = ()=> {
+    console.log(this)
+     var inner1 = function () {
+      console.log(this)
+    }
+    inner1.call(person)
+    var inner2 = ()=> {
+      console.log(this)
+    }
+    inner2()
+    
+  }
+    
+}
+
+var person = new test()
+person.outer1()
+person.outer2()
+
+
+// class test{
+//   constructor() {
+//     console.log(this)
+//     this.outer1 = function () {
+//       console.log(this)
+//       var inner1 = function () {
+//         console.log(this)
+//       }
+//       inner1()
+//       var inner2 =  ()=> {
+//         console.log(this)
+//       }
+//       inner2()
+//     }
+//     this.outer2 = ()=> {
+//       console.log(this)
+//        var inner1 = function () {
+//         console.log(this)
+//       }
+//       inner1()
+//       var inner2 =  ()=> {
+//         console.log(this)
+//       }
+//       inner2()
+//     }
+//   }
+// }
+
+// var person = new test()
+
+// person.outer1()
+// person.outer2()
+
+// var obj = {
+//   name: 'sachin',
+//   age: 40
+// }
+
+// var test = (a,b,c)=> {
+//   console.log(this)
+//   console.log(a,b,c)
+// }
+// test(1,2,3)
+// test.call(obj, 1,2,3)
+// test.apply(obj, [1,2,3])
+// test.bind(obj)(1,2,3)
 

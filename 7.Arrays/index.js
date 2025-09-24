@@ -181,9 +181,90 @@ var arr = [1, 2, 3, 4, 5]
 
 // console.log(uniqueArr)
 
+// var arr = [1, 2, 3, 4, 5]
+
+// var res = arr.reduce((cum, cur) => {
+//   return cum + cur
+// }, 0)
+// console.log(res)
+
+// var arr = [1, 2, [10, 20], [100, 200, [1000, 2000]]]
+// console.log(arr)
+
+// var flattenArr = arr.flat(Infinity)
+// console.log(flattenArr)
+
+// var flattenArr = []
+
+// function flattenFun(arr) {
+//   for (var value of arr) {
+//     console.log(value)
+//     if (Array.isArray(value)) {
+//        flattenFun(value)
+//     } else {
+//       flattenArr.push(value)
+//     }
+//   }
+// }
+
+// flattenFun(arr)
+// console.log(flattenArr)
+
+// function test() {
+//   console.log(arguments, Array.isArray(arguments))
+//   var res = Array.from(arguments)
+//   console.log(res, Array.isArray(res))
+// }
+// test(1,2,3,4,5)
+
+//sorting
+
+// var arr = [1, 2, 5, 3, 8]
+// var arr = ['sachin', 'dhoni', 'kohli']
+// var arr = [1, 2, 3, 4, 5, 10, 9.5, 8, 7, 6]
+var arr = [{ course: 'nodejs' }, { course: 'css' }, { course: 'react' }, { course: 'html' }]
 
 
+console.log(arr)
 
+// console.log(arr.sort())
+
+// var DCO = arr.reverse()
+// console.log(DCO)
+// console.log(arr)
+
+// var res = arr.sort((a, b) => {
+//   if (a > b) {
+//     return -1
+//   } else {
+//     return 1
+//   }
+// })
+
+// console.log(res)
+
+// var res = arr.sort((a, b) => {
+//   if (a.course > b.course) {
+//     return -1
+//   } else {
+//     return 1
+//   }
+// })
+
+// console.log(res)
+
+
+for (var i = 0; i < arr.length; i++){
+  for (var j = i + 1; j < arr.length; j++){
+    if (arr[i].course > arr[j].course) {
+      var temp = arr[i]
+      arr[i] = arr[j]
+      arr[j] = temp
+    }
+  }
+}
+
+console.log(arr)
 
 
 

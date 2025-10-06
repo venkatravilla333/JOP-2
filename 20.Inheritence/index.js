@@ -67,24 +67,24 @@
 // console.log()
 
 
-var obj = {
-  name: 'sachin',
-  age: 40,
-  go: function(){
-    console.log('go')
-    this.play()
-  }
-}
+// var obj = {
+//   name: 'sachin',
+//   age: 40,
+//   go: function(){
+//     console.log('go')
+//     this.play()
+//   }
+// }
 
-console.log(obj)
+// console.log(obj)
 
-var objectBase = Object.getPrototypeOf(obj)
+// var objectBase = Object.getPrototypeOf(obj)
 
 
-Object.prototype.play = function () {
-  console.log('play')
-  // this.go()
-}
+// Object.prototype.play = function () {
+//   console.log('play')
+//   // this.go()
+// }
 // console.log(Object.getOwnPropertyDescriptor(objectBase, 'toString'))
 // console.log(Object.getOwnPropertyDescriptor(objectBase, 'play'))
 // console.log(Object.getOwnPropertyDescriptor(obj, 'age'))
@@ -113,3 +113,67 @@ Object.prototype.play = function () {
 // obj.go()
 
 // console.log(Object.keys(obj))
+
+
+function Wood(age) {
+  this.age = age
+}
+
+var w1 = new Wood(5)
+console.log(w1)
+// var woodBase = Object.getPrototypeOf(w1)
+// console.log(woodBase)
+
+Wood.prototype.cut = function () {
+  console.log('cut')
+}
+// console.log(w1)
+
+
+function Table(color, age) {
+  this.color = color;
+  Wood.call(this, age)
+  // this.cut = function () {
+  //   console.log('cut')
+  // }
+}
+
+Table.prototype = Object.create(Wood.prototype)
+
+Table.prototype.costructor = Table
+
+
+var t1 = new Table('white', 6)
+var t2 = new Table('black')
+var t3 = new Table('yellow')
+
+console.log(t1.age)
+// console.log(t1)
+// console.log(t2)
+// console.log(t3)
+t1.cut()
+
+// console.log(Table.prototype)
+
+
+function Chair(color) {
+  this.color = color;
+  // this.cut = function () {
+  //   console.log('cut')
+  // }
+}
+
+
+Chair.prototype = Object.create(Wood.prototype)
+Chair.prototype.costructor = Chair
+
+
+var c1 = new Chair('white')
+var c2 = new Chair('black')
+var c3 = new Chair('yellow')
+
+console.log(c1)
+console.log(c2)
+console.log(c3)
+
+c1.cut()
